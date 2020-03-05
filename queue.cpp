@@ -59,29 +59,15 @@ class Queue{
 
 };
 int main(){
-     string command;
     int x;
-    Queue MyQueue;
-    while(cin >> command){
-        if(command =="push"){
-            cin >>x;
-            MyQueue.push(x);
-        }
-        else if(command =="pop"){
-            MyQueue.pop();
-        }
-        else if(command == "front"){
-            MyQueue._front();
-        }
-        else if(command == "size"){
-            MyQueue.size();
-        }
-        else if(command == "clear"){
-            MyQueue.clear();
-        }
-        else if(command == "exit"){
-            cout << "bye" << endl;
-            break;
-        }
-    }
+    cin>>x;
+    Queue q;
+    q.push(x);
+    cout << "First element: "<< q._front() << endl;
+    cout << "Pop front element : " << q.pop() << endl;
+    cout<< "Size: "<< q.size() << endl;
+    q.clear();
+
+    return 0;
+
 }
